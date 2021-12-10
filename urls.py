@@ -17,7 +17,14 @@ from django.contrib import admin
 from django.urls import path
 from instgram import views
 urlpatterns = [
-    path('apis', views.Apostudent.as_view() ,name="api")
+    # path('apis', views.Apostudent.as_view() ,name="api"),
+    path('get',views.get,name="f"),
+    path('Posts/',views.Dataview.as_view(),name='Data'),
+    path('postid/<int:pk>',views.Dataid.as_view(),name="ff"),
+    path('userid/<int:pk>',views.Viewuser.as_view()),
+    path('profile/<int:pk>',views.Viewpprofile.as_view()),
+    path('viewfollow/<int:pk>',views.Viewfolloww.as_view())
+
     # path('demo',include('demo.url')),
     # path('', views.home),
     # path('projectadd',views.Projectadd,name='projectadd2'),

@@ -52,7 +52,7 @@ class Comment(models.Model):
 	image = models.ForeignKey(Post,related_name="comment", on_delete=models.CASCADE)
 	profile = models.ForeignKey(User,related_name="comment", on_delete=models.CASCADE)
 
-	def __str__(self):
+	def __int__(self):
 		return self.profile
 
 
